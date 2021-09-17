@@ -1,15 +1,15 @@
-# pam_tid
+# persistent-pam-tid (not so persistent)
 
 macOS automatically resets `/etc/pam.d/sudo` to its default state after each system upgrade. This launchd configuration adds pam_tid.so to `/etc/pam.d/sudo` at startup if not present.
 
 ## Installation
 
 ```console
-git clone https://github.com/BirkhoffLee/pam_tid.git
-sudo cp pam_tid/pam_tid_installer /usr/local/bin/
-sudo cp pam_tid/me.birkhoff.pam_tid.plist /Library/LaunchDaemons/
-sudo chown root:wheel /Library/LaunchDaemons/me.birkhoff.pam_tid.plist
-sudo launchctl load -w /Library/LaunchDaemons/me.birkhoff.pam_tid.plist
+git clone https://github.com/BirkhoffLee/persistent-pam-tid.git
+sudo cp persistent-pam-tid/pam-tid-installer /usr/local/bin/
+sudo cp persistent-pam-tid/me.birkhoff.persistent_pam_tid.plist /Library/LaunchDaemons/
+sudo chown root:wheel /Library/LaunchDaemons/me.birkhoff.persistent_pam_tid.plist
+sudo launchctl load -w /Library/LaunchDaemons/me.birkhoff.persistent_pam_tid.plist
 ```
 
 ## Disclaimer

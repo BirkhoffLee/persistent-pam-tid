@@ -16,14 +16,14 @@
 
     <key>ProgramArguments</key>
     <array>
-        <string>/usr/local/bin/pam_tid_installer</string>
+        <string>/usr/local/bin/pam-tid-installer</string>
     </array>
 
     <key>StandardOutPath</key>
-    <string>/tmp/pam_tid_installer.stdout.log</string>
+    <string>/tmp/pam-tid-installer.stdout.log</string>
 
     <key>StandardErrorPath</key>
-    <string>/tmp/pam_tid_installer.stderr.log</string>
+    <string>/tmp/pam-tid-installer.stderr.log</string>
 
 </dict>
 </plist>
