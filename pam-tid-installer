@@ -2,3 +2,6 @@
 if ! grep 'pam_tid.so' /etc/pam.d/sudo --silent; then
   sed -i -e '1s;^;auth       sufficient     pam_tid.so\n;' /etc/pam.d/sudo
 fi
+if ! grep 'pam_reattach.so' /etc/pam.d/sudo --silent; then
+  sed -i -e '1s;^;auth     optional     pam_reattach.so\n;' /etc/pam.d/sudo
+fi
