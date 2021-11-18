@@ -2,6 +2,8 @@
 
 macOS automatically resets `/etc/pam.d/sudo` to its default state after each system upgrade. This launchd configuration adds pam_tid.so to `/etc/pam.d/sudo` at startup if not present.
 
+Blog post: [Persistent sudo Touch ID Authentication on macOS](https://birkhoff.me/Persistent-sudo-Touch-ID-Authentication-on-macOS/)
+
 ## Installation
 
 ```console
@@ -10,6 +12,13 @@ sudo cp persistent-pam-tid/pam-tid-installer /usr/local/bin/
 sudo cp persistent-pam-tid/me.birkhoff.persistent_pam_tid.plist /Library/LaunchDaemons/
 sudo chown root:wheel /Library/LaunchDaemons/me.birkhoff.persistent_pam_tid.plist
 sudo launchctl load -w /Library/LaunchDaemons/me.birkhoff.persistent_pam_tid.plist
+```
+
+## Uninstalling
+
+```console
+sudo rm /usr/local/bin/pam-tid-installer
+sudo rm /Library/LaunchDaemons/me.birkhoff.persistent_pam_tid.plist
 ```
 
 ## Disclaimer
