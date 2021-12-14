@@ -4,6 +4,8 @@ macOS automatically resets `/etc/pam.d/sudo` to its default state after each sys
 
 Blog post: [Persistent sudo Touch ID Authentication on macOS](https://birkhoff.me/Persistent-sudo-Touch-ID-Authentication-on-macOS/)
 
+Only works for macOS Big Sur and below (not from Monterey; see [issue #1](https://github.com/BirkhoffLee/persistent-pam-tid/issues/1#issuecomment-993465772))
+
 ## Installation
 
 ```console
